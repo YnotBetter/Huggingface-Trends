@@ -1,0 +1,193 @@
+/* Custom Styles für Huggingface Model Finder */
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #161b22;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #484f58;
+}
+
+/* Tab Button Active State */
+.tab-btn.active {
+    color: #58a6ff;
+    border-bottom-color: #58a6ff;
+}
+
+/* Source Button Active State */
+.source-btn.active {
+    background-color: #58a6ff !important;
+    color: white !important;
+    border-color: #58a6ff !important;
+}
+
+/* Model Card Hover Effect */
+.model-card {
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.model-card:hover {
+    transform: translateY(-2px);
+    border-color: #58a6ff;
+}
+
+/* Code Block Styling */
+.code-block {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.code-block pre {
+    margin: 0;
+    padding: 1rem;
+    font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Copy Button */
+.copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    background-color: #30363d;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.code-block:hover .copy-btn {
+    opacity: 1;
+}
+
+.copy-btn:hover {
+    background-color: #484f58;
+}
+
+/* Badge Styles */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.badge-llm {
+    background-color: rgba(136, 87, 255, 0.2);
+    color: #a78bfa;
+}
+
+.badge-embedding {
+    background-color: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+}
+
+.badge-ocr {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+}
+
+.badge-tts {
+    background-color: rgba(251, 146, 60, 0.2);
+    color: #fb923c;
+}
+
+.badge-stt {
+    background-color: rgba(236, 72, 153, 0.2);
+    color: #f472b6;
+}
+
+/* Parameter Badge */
+.param-badge {
+    background-color: rgba(88, 166, 255, 0.2);
+    color: #58a6ff;
+}
+
+/* Recommended Badge */
+.recommended-badge {
+    background-color: rgba(251, 191, 36, 0.2);
+    color: #fbbf24;
+}
+
+/* Modal Animation */
+#modelModal.flex {
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#modelModal > div {
+    animation: slideUp 0.2s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .tab-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Link Styling */
+a.external-link {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+a.external-link:hover {
+    text-decoration: underline;
+}
+
+/* Stats Display */
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #8b949e;
+    font-size: 0.875rem;
+}
+
+/* Use Case Tags */
+.use-case-tag {
+    background-color: #21262d;
+    border: 1px solid #30363d;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    color: #c9d1d9;
+}
